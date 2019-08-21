@@ -1,6 +1,6 @@
 # commitlint-config-monorepo
 
-An opinionated, shareable `commitlint` config based on conventional commits, tailored to monorepos. It it intended to benefit repo maintainers over public consumers. 
+An opinionated, shareable `commitlint` config based on conventional commits, tailored to monorepos. It is intended to benefit repo maintainers over external consumers.
 Use with [@commitlint/cli](https://npm.im/@commitlint/cli).
 
 ## Differences from Conventional Commits
@@ -23,25 +23,13 @@ echo "config(app): added namespacing to PostCSS" # new type: config
 
 ## Getting started
 
-Install dev dependencies:
+> **note:** see [this gist](https://gist.github.com/pskfyi/497fbcc10a0625c716d30995fe336947) for setting up commitlint and husky.
 
 ```sh
-npm i -D husky @commitlint/cli commitlint-config-monorepo
+npm i -D commitlint-config-monorepo
 ```
 
-In your `package.json`, wire up husky:
-
-```json
-{
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }  
-  }
-}
-```
-
-In your `commitlint.config.js` at the root of your monorepo:
+In `commitlint.config.js` at the root of your repo:
 
 ```js
 module.exports = {
@@ -61,15 +49,15 @@ module.exports = {
 
 - In all other contexts, we use capital letters at the beginnings of statements. Commits aren't special.
 
-- Requiring scope provides consistency and discourages haphazard commits that would apply to multiple scopes.
+- Requiring scope provides consistency and discourages haphazard commits that would apply to multiple scopes
 
-- Types 'revert' and 'perf' both seem to be varieties of refactor, no need for additional types
+- Types 'revert' and 'perf' both are varieties of refactor, no need for additional types
 
-- Elaborate docs often found in monorepos function more as a scope than a type of update; they can have their own feats, fixes, styles, tests, ci, and builds
+- Elaborate docs, often found in monorepos, function more as a scope than a type; they can have their own feats, fixes, styles, tests, ci, and builds
 
-- The changing of config files, especially babel and webpack files, is not a 'chore' - a dedicated type is desirable
+- Changing config files, especially babel and webpack files, is not a 'chore' - a dedicated type is desirable
 
-### Why not use `@commitlint/config-lerna-scopes`?
+### Why not use `@commitlint/config-lerna-scopes` or a similar pattern?
 
 - Preference for explicit scope naming
 
