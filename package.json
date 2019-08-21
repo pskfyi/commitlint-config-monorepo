@@ -1,0 +1,21 @@
+{
+  "name": "commitlint-config-monorepo",
+  "version": "1.0.0",
+  "description": "Opinionated shareable commitlint config for monorepo projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pskfyi/commitlint-config-monorepo.git"
+  },
+  "keywords": [
+    "conventional-changelog",
+    "commitlint",
+    "commitlint-config"
+  ],
+  "author": "Patrick Keenan <patrick.keenan.fyi@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pskfyi/commitlint-config-monorepo/issues"
+  },
+  "homepage": "https://github.com/pskfyi/commitlint-config-monorepo#readme"
+}
