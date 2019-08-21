@@ -35,9 +35,13 @@ In `commitlint.config.js` at the root of your repo:
 module.exports = {
   extends: ['monorepo'],
   rules: {
-    'scopes-enum': [
-      // list your scopes here
-      // defaults to 'docs' and 'repo'
+    'scope-enum': [
+      2, // throw error
+      'always', 
+      [
+        // list your scopes here
+        // defaults to 'docs' and 'repo'
+      ]
     ]
   }
 }

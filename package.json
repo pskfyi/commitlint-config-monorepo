@@ -1,6 +1,6 @@
 {
   "name": "commitlint-config-monorepo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Opinionated shareable commitlint config for monorepo projects",
   "main": "index.js",
   "repository": {
