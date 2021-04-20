@@ -34,8 +34,8 @@ module.exports = {
       2, // throw error
       "always",
       [
-        // list your scopes here
-        // defaults to 'docs' and 'repo'
+        // This is the only default value baked into the config.
+        "repo",
       ],
     ],
   },

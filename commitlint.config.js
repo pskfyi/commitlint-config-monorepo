@@ -16,7 +16,12 @@ module.exports = {
       "never",
     ],
     // Scope's value must be one of these explicit strings.
-    "scope-enum": [2, "always", ["repo"]],
+    "scope-enum": [
+      2,
+      "always",
+      // Override these values per your repo's scoping needs.
+      ["repo"],
+    ],
     // Subject and type are required alongside scope.
     "subject-empty": [2, "never"],
     "type-empty": [2, "never"],
